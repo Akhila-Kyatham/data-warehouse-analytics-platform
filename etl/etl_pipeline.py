@@ -1,3 +1,4 @@
+# Simulating a batch ETL pipeline similar to AWS Glue / cloud-based 
 import pandas as pd
 
 print("Starting ETL Pipeline...")
