@@ -1,5 +1,14 @@
 # End-to-End Data Warehouse & Analytics Platform
 
+## Quick Start
+
+Run the ETL pipeline locally:
+
+```bash
+pip install -r requirements.txt
+python etl/etl_pipeline.py
+```
+
 ## Overview
 
 I built this project to understand how data is handled in a typical batch processing system, where data is collected, transformed, and made ready for analysis. While a lot of focus today is on real-time systems, batch pipelines still play a major role in reporting, analytics, and business decision-making.
@@ -48,6 +57,17 @@ The pipeline follows a simple and practical flow:
 * SQL layer is used for extracting insights
 
 This layered approach is commonly used in real-world data systems.
+
+## Key Insights (Example)
+
+Using the transformed dataset, the following types of insights can be generated:
+
+* Total revenue generated across all transactions
+* Revenue contribution by each product category
+* Identification of top customers based on total spend
+* Monthly trends in sales performance
+
+These are typical business questions that data teams solve using warehouse-based pipelines.
 
 ## Running the project
 
