@@ -15,6 +15,7 @@ I built this project to understand how data is handled in a typical batch proces
 
 Instead of writing a single script, I approached this as a small data platform — with clear layers for raw data, transformation, and analytics — to reflect how things are structured in real-world environments.
 
+
 ## Purpose of the Project
 
 The main goal of this project was to:
@@ -25,6 +26,7 @@ The main goal of this project was to:
 * Think beyond code and focus on how data flows across different stages
 
 This project helped me bridge the gap between writing scripts and designing a complete data workflow.
+
 
 ## How this can be used in real life
 
@@ -37,6 +39,7 @@ In real-world scenarios, systems like this are used across industries:
 
 Even though the dataset here is simple, the structure reflects how production pipelines handle much larger and more complex data.
 
+
 ## What this project does
 
 * Reads raw sales data from a source layer
@@ -44,6 +47,7 @@ Even though the dataset here is simple, the structure reflects how production pi
 * Stores processed data separately for analysis
 * Provides SQL queries to generate business insights
 * Demonstrates a structured end-to-end data pipeline
+
 
 ## How the pipeline is structured
 
@@ -58,6 +62,7 @@ The pipeline follows a simple and practical flow:
 
 This layered approach is commonly used in real-world data systems.
 
+
 ## Key Insights (Example)
 
 Using the transformed dataset, the following types of insights can be generated:
@@ -68,6 +73,7 @@ Using the transformed dataset, the following types of insights can be generated:
 * Monthly trends in sales performance
 
 These are typical business questions that data teams solve using warehouse-based pipelines.
+
 
 ## Running the project
 
@@ -85,18 +91,33 @@ python etl/etl_pipeline.py
 
 The script reads raw data, transforms it, and saves the cleaned dataset to the processed layer.
 
+
 ## Sample Output
 
 The pipeline prints both raw and transformed data during execution and stores the cleaned dataset for further analysis.
 
 ![ETL Output](dashboards/etl_output.png)
 
+
+## Visualization
+
+To make the output more meaningful, I also generated a simple visualization based on the processed data:
+
+### Revenue by Product
+
+![Revenue Chart](dashboards/revenue_by_product.png)
+
+This gives a quick view of how different products contribute to overall revenue, similar to what would typically be used in a business dashboard.
+
+
 ## Tech Stack
 
 * Python (Pandas)
 * SQL
 * Data modeling concepts
+* Visualization (Matplotlib)
 * Cloud-aligned design (AWS S3, Glue, Athena – conceptual mapping)
+
 
 ## Project Structure
 
@@ -108,13 +129,15 @@ data-warehouse-analytics-platform/
 │   └── processed/         # Cleaned data
 │
 ├── etl/
-│   └── etl_pipeline.py    # Transformation logic
+│   ├── etl_pipeline.py    # Transformation logic
+│   └── generate_chart.py  # Visualization script
 │
 ├── sql/
 │   └── analysis_queries.sql  # Analytical queries
 │
 ├── dashboards/
-│   └── etl_output.png     # Output proof
+│   ├── etl_output.png
+│   └── revenue_by_product.png
 │
 ├── requirements.txt
 └── README.md
@@ -128,6 +151,8 @@ While building this, I focused more on **how the system is structured** rather t
 * Separating raw and processed data clearly
 * Writing transformations that can scale
 * Thinking about how this would work in a cloud environment
+* Extending the pipeline to include basic analytics and visualization
+
 
 ## How this maps to a cloud setup
 
@@ -139,6 +164,7 @@ Although this project runs locally, it is designed to scale:
 * Visualization → QuickSight or BI tools
 
 The idea was to build a strong local foundation that can be extended to cloud systems.
+
 
 ## Final Thoughts
 
