@@ -133,7 +133,7 @@ data-warehouse-analytics-platform/
 │   └── generate_chart.py  # Visualization script
 │
 ├── sql/
-│   └── analysis_queries.sql  # Analytical queries
+│   └── business_queries.sql  # Business-focused analytical queries
 │
 ├── dashboards/
 │   ├── etl_output.png
@@ -142,6 +142,7 @@ data-warehouse-analytics-platform/
 ├── requirements.txt
 └── README.md
 ```
+
 
 ## What I focused on
 
